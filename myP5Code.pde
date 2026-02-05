@@ -7,21 +7,45 @@ setup = function() {
 };
 
 //🟢draw Function - will run on repeat
-draw = function(){
+var drawBunny = function(BunnyX, BunnyY){
+  var BunnySize = (20,30);
+
+  textSize(BunnySize);
+  text("🐇", 99, 210);
+
+  drawBunny();
 
 };
 
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
+  var myText = "x: " + mouseX + "\ny: " + mouseY;
+  console.log(myText);
+
+  drawBird();
 
 }
 
-//🟡drawSomething Function - will run when called
-var drawSomething = function(fishX, fishY, fishColor){
-  textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
+//🟡drawBird Function - will run when called
+var drawBird = function(birdX, birdY){
+  var birdSize = (20,30);
+  var birdX = mouseX + random (-12, 12);
+  var birdY = mouseY + random (-12, 12);
+
+  textSize(birdSize);
+  text("🐤", birdX, birdY);
 };
+
+//🟡drawBunny Function - will run when called
+var drawBunny = function(BunnyX, BunnyY){
+  var BunnySize = (20,30);
+  var BunnyX = BunnyX + random (-12, 12);
+  var BunnyY = BunnyY + random (-12, 12);
+
+  textSize(BunnySize);
+  text("🐇", BunnyX, BunnyY);
+};
+
 
 
 
