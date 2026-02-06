@@ -7,15 +7,19 @@ setup = function() {
 };
 
 //🟢draw Function - will run on repeat
-var drawBunny = function(BunnyX, BunnyY){
-  var BunnySize = (20,30);
+draw = function(){
+    var flowerSize = (10,30);
+    var flowerX = random(-100,600);
+    var flowerY = random(300,500);
+  
+    textSize(flowerSize);
+     text("🌷", flowerX, flowerY);
+  };
+  
+  
 
-  textSize(BunnySize);
-  text("🐇", 99, 210);
+  
 
-  drawBunny();
-
-};
 
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
@@ -23,29 +27,30 @@ mouseClicked = function(){
   console.log(myText);
 
   drawBird();
+  drawBunny(mouseX + 80, mouseY - 50);
+
 
 }
 
 //🟡drawBird Function - will run when called
 var drawBird = function(birdX, birdY){
   var birdSize = (20,30);
-  var birdX = mouseX + random (-12, 12);
-  var birdY = mouseY + random (-12, 12);
+  var birdX = mouseX;
+  var birdY = mouseY;
 
   textSize(birdSize);
   text("🐤", birdX, birdY);
 };
 
 //🟡drawBunny Function - will run when called
-var drawBunny = function(BunnyX, BunnyY){
-  var BunnySize = (20,30);
-  var BunnyX = BunnyX + random (-12, 12);
-  var BunnyY = BunnyY + random (-12, 12);
+var drawBunny = function(bunnyX, bunnyY){
+  var bunnySize = (20,30);
+  var bunnyX = mouseX + random (-12, 50);
+  var bunnyY = random(250,300);
 
-  textSize(BunnySize);
-  text("🐇", BunnyX, BunnyY);
+  textSize(bunnySize);
+  text("🐇", bunnyX, bunnyY);
 };
-
 
 
 
