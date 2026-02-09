@@ -13,7 +13,7 @@ draw = function(){
     var flowerY = random(300,500);
   
     textSize(flowerSize);
-     text("🌷", flowerX, flowerY);
+     text("🌷", flowerX, flowerY); //flower
   };
   
   
@@ -39,7 +39,7 @@ var drawBird = function(birdX, birdY){
   var birdY = mouseY;
 
   textSize(birdSize);
-  text("🐤", birdX, birdY);
+  text("🐤", birdX, birdY); //bird
 };
 
 //🟡drawBunny Function - will run when called
@@ -49,7 +49,7 @@ var drawBunny = function(bunnyX, bunnyY){
   var bunnyY = random(250,300);
 
   textSize(bunnySize);
-  text("🐇", bunnyX, bunnyY);
+  text("🐇", bunnyX, bunnyY); //bunny
 };
 
 
