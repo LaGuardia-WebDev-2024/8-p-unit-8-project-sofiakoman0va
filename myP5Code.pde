@@ -8,12 +8,7 @@ setup = function() {
 
 //🟢draw Function - will run on repeat
 draw = function(){
-    var flowerSize = (10,30);
-    var flowerX = random(-100,600);
-    var flowerY = random(300,500);
-  
-    textSize(flowerSize);
-     text("🌷", flowerX, flowerY); //flower
+    drawFlower(100,100);
   };
   
   
@@ -26,7 +21,7 @@ mouseClicked = function(){
   var myText = "x: " + mouseX + "\ny: " + mouseY;
   console.log(myText);
 
-  drawBird();
+  drawBird(10,10);
   drawBunny(mouseX + 80, mouseY - 50);
 
 
@@ -52,6 +47,15 @@ var drawBunny = function(bunnyX, bunnyY){
   text("🐇", bunnyX, bunnyY); //bunny
 };
 
+//🟡drawFlower Function - will run when called
+var drawFlower = function(flowerX, flowerY){
+  var flowerSize = (10,30);
+  var flowerX = random(-100,600);
+  var flowerY = random(300,500);
+  
+  textSize(flowerSize);
+  text("🌷", flowerX, flowerY); //flower
+};
 
 
 
